@@ -22,14 +22,29 @@ import FrParentInput from './components/FrParentInput';
 import ClickCounter from './components/ClickCounter';
 import HoverCounter from './components/HoverCounter';
 import User from './components/User';
+import ComponentC from './components/contextComponent/ComponentC';
+import { UserProvider } from './components/contextComponent/UserContext';
+import ContextHookA from './components/contextComponent/ContextHookA';
+import React from 'react';
+
+export const UserContext = React.createContext()
 
 function App() {
   return (
     <div className="App">
+      {/* <ParentComponent /> */}
+      {/* <UserContext.Provider value='Raubins' >
+       <ContextHookA />
+      </UserContext.Provider> */}
+      
+      {/* <UserProvider value='Raubins' >
+       <ComponentC />
+      </UserProvider>
+      <ComponentC /> */}
       {/* <User name="Raubins"/>
       <User name= {()=>"Raubins"}/> */}
       {/* <User name= {(isLoggedIn) =>isLoggedIn ? "Raubins" : "Ankita"}/> */}
-      <User render= {(isLoggedIn) =>isLoggedIn ? "Raubins" : "Ankita"}/>
+      {/* <User render= {(isLoggedIn) =>isLoggedIn ? "Raubins" : "Ankita"}/> */}
       {/* <ClickCounter />
       <HoverCounter /> */}
       {/* <FrParentInput /> */}
